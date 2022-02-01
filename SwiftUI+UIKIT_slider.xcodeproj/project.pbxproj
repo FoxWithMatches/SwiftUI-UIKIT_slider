@@ -11,6 +11,8 @@
 		EA33502727A8380B008D5DDC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA33502627A8380B008D5DDC /* ContentView.swift */; };
 		EA33502927A8380C008D5DDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA33502827A8380C008D5DDC /* Assets.xcassets */; };
 		EA33502C27A8380C008D5DDC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA33502B27A8380C008D5DDC /* Preview Assets.xcassets */; };
+		EA33503327A83F67008D5DDC /* SliderUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA33503227A83F67008D5DDC /* SliderUI.swift */; };
+		EA33503527A854E3008D5DDC /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA33503427A854E3008D5DDC /* SliderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		EA33502627A8380B008D5DDC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EA33502827A8380C008D5DDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA33502B27A8380C008D5DDC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EA33503227A83F67008D5DDC /* SliderUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderUI.swift; sourceTree = "<group>"; };
+		EA33503427A854E3008D5DDC /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 			children = (
 				EA33502427A8380B008D5DDC /* SwiftUI_UIKIT_sliderApp.swift */,
 				EA33502627A8380B008D5DDC /* ContentView.swift */,
+				EA33503427A854E3008D5DDC /* SliderView.swift */,
+				EA33503227A83F67008D5DDC /* SliderUI.swift */,
 				EA33502827A8380C008D5DDC /* Assets.xcassets */,
 				EA33502A27A8380C008D5DDC /* Preview Content */,
 			);
@@ -137,6 +143,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA33503327A83F67008D5DDC /* SliderUI.swift in Sources */,
+				EA33503527A854E3008D5DDC /* SliderView.swift in Sources */,
 				EA33502727A8380B008D5DDC /* ContentView.swift in Sources */,
 				EA33502527A8380B008D5DDC /* SwiftUI_UIKIT_sliderApp.swift in Sources */,
 			);
