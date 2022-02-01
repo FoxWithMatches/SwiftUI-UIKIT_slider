@@ -34,9 +34,16 @@ struct ContentView: View {
             }
                    .padding()
             Button("Начать заново")
-            {}
+            { updateRandom() }
         }
     }
+    
+    private func updateRandom() {
+        let randomNumber = Int.random(in: 0...100)
+        
+        self.targetValue = randomNumber
+    }
+    
     private func computeScore() -> Int {
         let difference = abs(targetValue - lround(currentValue))
         return 100 - difference
