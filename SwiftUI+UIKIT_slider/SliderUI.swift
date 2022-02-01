@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct SliderUI: UIViewRepresentable {
+    @Binding var currentValue: Double
     
-    @Binding var value: Double
+    let alpha: Int
+    let color: UIColor
     
     func makeUIView(context: Context) -> UISlider {
         let slider = UISlider(frame: .zero)
         slider.minimumValue = 0
         slider.maximumValue = 100
-        slider.thumbTintColor = .red
         slider.addTarget(context.coordinator,
                          action: #selector(Coordinator.changedValue),
                          for: .valueChanged)
@@ -24,11 +25,12 @@ struct SliderUI: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: UISlider, context: Context) {
-        uiView.value = Float(value)
+        uiView.value = Float(currentValue)
+        uiView.thumbTintColor = color.withAlphaComponent(CGFloat(alpha) / 100)
     }
     
     func makeCoordinator() -> Coordinator {
-        Coordinator(value: $value)
+        Coordinator(value: $currentValue)
     }
 }
 
@@ -39,7 +41,7 @@ extension SliderUI {
         init(value: Binding<Double>) {
             self._value = value
         }
-
+        
         @objc func changedValue(_ sender: UISlider) {
             value = Double(sender.value)
         }
@@ -48,6 +50,6 @@ extension SliderUI {
 
 struct SliderUI_Previews: PreviewProvider {
     static var previews: some View {
-        SliderUI(value: .constant(100))
+        SliderUI(currentValue: .constant(100), alpha: 100, color: .red)
     }
 }

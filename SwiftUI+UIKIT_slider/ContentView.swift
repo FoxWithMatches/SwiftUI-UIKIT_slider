@@ -11,7 +11,6 @@ struct ContentView: View {
     @State private var currentValue = 30.0
     @State private var targetValue = Int.random(in: 0...100)
     @State private var showAlert = false
-    @State private var onTap = false
     
     var body: some View {
         VStack {
@@ -20,10 +19,13 @@ struct ContentView: View {
                 .padding()
             HStack {
                 Text("0")
-                SliderView(currentValue: $currentValue)
+                SliderUI(currentValue: $currentValue,
+                         alpha: computeScore(),
+                         color: .red)
                 Text("100")
             }
             .padding()
+            
             Button("Проверь меня!") {
                 showAlert.toggle()
             }
@@ -40,8 +42,7 @@ struct ContentView: View {
     
     private func updateRandom() {
         let randomNumber = Int.random(in: 0...100)
-        
-        self.targetValue = randomNumber
+        targetValue = randomNumber
     }
     
     private func computeScore() -> Int {
